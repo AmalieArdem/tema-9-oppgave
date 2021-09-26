@@ -1,0 +1,509 @@
+:root {
+  --ff-bodytext: "inter", sans-serif;
+  --ff-heading: "Urbanist", sans-serif;
+  --ff-header: "Urbanist", sans-serif, 900;
+  /* font familie */
+
+  --fs-1100: clamp(2.5rem, 1rem + 5vw, 5rem);
+  --fs-900: clamp(1rem, 1rem + 5vw, 3rem);
+  --fs-400: 1.8rem;
+  --fs-300: 1.4rem;
+  /* størrelser */
+
+  --clr-primary-400: hsl(180, 70%, 60%);
+  --clr-primary-600: hsl(0, 0%, 0%);
+  --clr-heading-900: white;
+  /* farge */
+} /* root er javascript */
+
+/*
+html {
+    scroll-behavior: smooth;
+}
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* main side (alt utenom navigasjon)*/
+main {
+  font-family: "Urbanist", sans-serif;
+}
+
+h1 {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-1100);
+ /* color: var(--clr-heading-900); */
+  font-weight: 700;
+
+  justify-content: center;
+  display: flex;
+
+}
+
+h2 {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-900);
+ /* color: var(--clr-primary-600); */
+}
+
+p {
+  color: var(--clr-primary-600);
+  font-family: var(--ff-bodytext);
+}
+
+/* navigasjonsbar */
+nav {
+  background-color: #E49106;
+  display: inline-flex;
+  width: 100%;
+
+  position: absolute;
+}
+
+
+.menu {
+  width: 3rem;
+}
+
+.bloomberg-title {
+  width: 100%;
+
+font-family: var(--ff-heading);
+font-weight: 700;
+
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 2rem;
+
+
+
+  /*trenger font family */
+}
+
+/* Overskrift*/
+
+/* denne blir lagt til ved scroll*/
+.container-main-title-2-js {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  height: 100vh;
+
+
+  animation-name: titleanimation1;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes titleanimation1 {
+  0% {
+    color: black;
+  }
+  100% {
+      color: white;
+  }
+}
+
+.container-main-title-2 {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#title-container {
+  height: 100vh;
+}
+#title-container-2 {
+  color: white;
+}
+#title-container-secondary {
+margin-top: 10rem;
+  height: 50vh;
+}
+
+.container-main-title {
+  display: block;
+}
+
+
+/* paragraphs of text grid container*/
+.paragraph-1-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+
+/* bilder på siden */
+.image-box-1 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  
+}
+
+.image-box-1 > img {
+  width: 100%;
+  object-fit: contain;
+  position: absolute;
+}
+.image-box-2 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.image-box-2 > img {
+  width: 98vw;
+  object-fit: contain;
+
+  position: -webkit-sticky;
+  position: sticky;
+
+  top: 0;
+  z-index: 19;
+}
+
+.image-box-1 > img:first-child {
+  opacity: 100%;
+  z-index: 1;
+}
+
+.image-box-1 > img:nth-child(2) {
+  /* opacity: 50%; */
+  z-index: 3;
+}
+
+
+
+
+#buff {
+  width: 100%;
+  opacity: 0;
+  object-fit: contain;
+  z-index: -5;
+}
+
+.infografikk-container {
+position: relative;
+margin-top: 5rem;
+}
+
+#infografikk-img {
+  max-width: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: block;
+}
+
+
+#infografikk-img:hover {
+  animation-name: infohover;
+  animation-duration: 250ms;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  }
+
+@keyframes infohover {
+    0% {
+      max-width: 15rem;
+    }
+    100% {
+      max-width: 20rem;
+    }
+}
+
+/*
+.infografikk1 > img:first-child {
+  z-index: 10;
+
+  top: 0;
+  left: 0;
+
+  position: relative;
+}
+.infografikk1 > img:nth-child(2) {
+
+  top: 0;
+  left: 0;
+
+  position: absolute;
+}
+*/
+
+
+
+/* For pc skjerm størrelser */
+
+@media (min-width: 60em) {
+  /* main title 
+  .container-main-title > h1:first-child {
+    padding-right: 30rem;
+    background-color: green;
+  }*/
+  blockquote {
+  max-width: 30rem;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--fs-400)
+}
+
+  #how-to-fix-main {
+    padding-right: 30rem;
+  }*
+
+  .container-main-title > h1:nth-child(2) {
+    padding-right: 41rem;
+    padding-bottom: 5rem;
+  }
+
+  .container-main-title > h1:nth-child(3) {
+    padding-left: 12rem;
+  }
+  .container-main-title > h1:nth-child(4) {
+    padding-left: 10rem;
+    padding-bottom: 5rem;
+  }
+
+
+
+  /* Første artikkel paragraf*/
+  .paragraph-1-container {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 2fr;
+    display: grid;
+
+  
+  }
+
+ /* Paragrafer bredde, dette er containeren som holder teksten inne*/
+  .paragraph-1-container p {
+    max-width: 30rem;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  infografikk-container {
+ /*   grid-column: 1; */
+  }
+
+
+  .paragraph-box-right {
+/*    grid-column: 2; */
+
+grid-row:    1 / 5;
+grid-column: 2 / 4;
+  }
+
+  .paragraph-box-left-empty {
+    background-color: white;
+    max-width: 19rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    }
+  
+
+    .paragraph-box-left-empty-js {
+    padding: 6rem 0rem 0rem 1rem;
+    color: white;
+
+    animation-name: whitetoblack;
+    animation-duration: 1500ms;
+    animation-timing-function: linear;
+    animation-delay: 500ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    }
+
+  @keyframes whitetoblack {
+      0% {
+          color: white;
+      }
+      100% {
+          color: black;
+      }
+  }
+  
+    .paragraph-box-left-empty-js-2 {
+    padding: 6rem 0rem 0rem 1rem;
+    color: black;
+
+
+    animation-name: whitetoblack;
+    animation-duration: 1500ms;
+    animation-timing-function: linear;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    }
+
+ @keyframes whitetoblack {
+     0% {
+        color: white;
+     }
+     100% {
+        color: black;
+     }
+ }
+
+
+  /* Supply side economics unik kode*/
+
+ 
+
+  .quote-container {
+    margin-bottom: 5rem;
+    max-width: 19rem;
+    position: relative;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+   #quote {
+    display: block;
+  }
+
+  /* german model unik kode*/
+  .german-model-grid {
+
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .image-box-3-container {
+    justify-content: center;
+    display: flex;
+  }
+  .image-box-3 {
+    width: 100vh;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    object-position: bottom center;
+
+   align-items: center;
+  }
+
+  #container-main-title-german {
+    text-align: center;
+  }
+}
+
+/*
+https://css-tricks.com/pure-css-horizontal-scrolling/ 
+https://blog.hubspot.com/website/horizontal-scrolling
+*/
+
+
+ /* For ipad og mobil skjermer*/
+
+@media (max-width: 55em) {
+
+  blockquote {
+    max-width: 12rem;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: var(--fs-300)
+  }
+
+  #title-container-2 {
+    color: white;
+  }
+
+  
+  .paragraph-1-container p {
+    max-width: 17rem;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+ /* Første infografikk */
+  .infografikk-container {
+    background-color: white;
+
+    border: none;
+    width: 95vw;
+    height: 150px;
+    overflow: scroll;
+
+    box-shadow: inset 0 0 15px #0000000e;
+  }
+  
+  /*
+  .infografikk1 > img:first-child {
+  }
+  .infografikk1 > img:nth-child(2) {
+  }
+  */
+
+  .minor-title-container { 
+    margin-bottom: 5rem;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+
+.minor-title {
+   position: -webkit-sticky;
+   position: sticky;
+
+   top: 0;
+}
+
+
+.image-box-3 {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.container-main-title {
+margin-bottom: 5rem;
+max-width: 19rem;
+position: relative;
+
+margin-left: auto;
+margin-right: auto;
+}
+
+
+
+.quote-container {
+  margin-bottom: 5rem;
+ 
+  position: relative;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ #quote {
+  display: block;
+}
+
+}
